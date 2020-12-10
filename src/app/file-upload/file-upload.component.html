@@ -1,0 +1,26 @@
+<div *ngIf="userId">
+    <input
+        type="file"
+        #fileSelect
+        id="fileSelect"
+        name="fileSelect"
+        mulitple="multiple"
+        (change)="this.fileUploadChange($event.target.files)"
+    >
+    <input type="button" value="Check Files" (click)="getFiles()">
+
+    <div class="file-table" *ngIf="files">
+        <br><hr><br>
+        <table>
+            <tr *ngFor="let file of files">
+                <td><h3>{{ file.name }}</h3><h5>Size: {{ file.fileSize }} bytes</h5></td>
+                <td><div class="extra-padding">
+                    <img class="button-icon" src="../../assets/trash1600.png" (click)="deleteFile(file.name)">
+                </div></td>
+                <td><div class="extra-padding">
+                    <img class="button-icon" src="../../assets/download_icon.png" (click)="downloadFile(file.name)">
+                </div></td>
+            </tr>
+        </table>
+    </div>
+</div>

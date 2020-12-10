@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+img.button-icon {
+    height: 33px;
+    max-height: 36px;
+}
+
+img.button-icon:hover {
+    border-bottom: 1px solid;
+   
+}
+
+.extra-padding {
+    padding-left: 32px;
+}
+
+.file-table {
+    padding-left: 64px;
+}
